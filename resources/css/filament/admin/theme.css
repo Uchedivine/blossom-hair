@@ -1,0 +1,163 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+/* Custom Blossom Hair Theme */
+
+/* Light Mode Customizations */
+:root {
+    --primary-50: #fdf2f8;
+    --primary-100: #fce7f3;
+    --primary-200: #fbcfe8;
+    --primary-300: #f9a8d4;
+    --primary-400: #f472b6;
+    --primary-500: #ec4899;
+    --primary-600: #db2777;
+    --primary-700: #be185d;
+    --primary-800: #9f1239;
+    --primary-900: #831843;
+}
+
+/* Dark Mode Customizations */
+.dark {
+    --primary-50: #831843;
+    --primary-100: #9f1239;
+    --primary-200: #be185d;
+    --primary-300: #db2777;
+    --primary-400: #ec4899;
+    --primary-500: #f472b6;
+    --primary-600: #f9a8d4;
+    --primary-700: #fbcfe8;
+    --primary-800: #fce7f3;
+    --primary-900: #fdf2f8;
+}
+
+/* Sidebar Branding */
+.fi-sidebar-header {
+    padding: 1.5rem 1rem;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Better touch targets */
+    .fi-ta-actions button,
+    .fi-ta-actions a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improved table scrolling */
+    .fi-ta-table {
+        font-size: 0.875rem;
+    }
+    
+    /* Better form spacing on mobile */
+    .fi-fo-field-wrp {
+        margin-bottom: 1rem;
+    }
+    
+    /* Collapsible sidebar on mobile */
+    .fi-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .fi-sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fi-sidebar {
+        width: 16rem;
+    }
+    
+    .fi-main {
+        margin-left: 16rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ec4899;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #db2777;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #f472b6;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #f9a8d4;
+}
+
+/* Smooth transitions */
+* {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Better focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #ec4899;
+    outline-offset: 2px;
+}
+
+/* Loading states */
+.fi-ta-table-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+    .fi-topbar {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: blur(8px);
+    }
+    
+    /* Better mobile menu */
+    .fi-sidebar-nav {
+        padding-bottom: 5rem;
+    }
+    
+    /* Improved mobile forms */
+    .fi-fo-component-ctn {
+        padding: 0.75rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .fi-sidebar,
+    .fi-topbar,
+    .fi-ta-actions {
+        display: none !important;
+    }
+    
+    .fi-main {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
