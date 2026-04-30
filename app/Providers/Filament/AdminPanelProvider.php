@@ -43,6 +43,22 @@ class AdminPanelProvider extends PanelProvider
                 'Marketing',
                 'Settings',
             ])
+            ->authGuard('web')
+            ->authMiddleware([
+                Authenticate::class,
+            ])
+            ->middleware([
+                EncryptCookies::class,
+                AddQueuedCookiesToResponse::class,
+                StartSession::class,
+                AuthenticateSession::class,
+                ShareErrorsFromSession::class,
+                VerifyCsrfToken::class,
+                SubstituteBindings::class,
+                DisableBladeIconComponents::class,
+                DispatchServingFilamentEvent::class,
+                \App\Http\Middleware\EnsureUserIsAdmin::class,
+            ])
             ->renderHook(
                 'panels::styles.before',
                 fn (): string => view('vendor.filament-panels.components.styles.theme')->render(),
@@ -56,20 +72,6 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
-            ])
-            ->middleware([
-                EncryptCookies::class,
-                AddQueuedCookiesToResponse::class,
-                StartSession::class,
-                AuthenticateSession::class,
-                ShareErrorsFromSession::class,
-                VerifyCsrfToken::class,
-                SubstituteBindings::class,
-                DisableBladeIconComponents::class,
-                DispatchServingFilamentEvent::class,
-            ])
-            ->authMiddleware([
-                Authenticate::class,
             ])
             ->spa();
     }
