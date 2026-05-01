@@ -4,7 +4,7 @@ export default {
     presets: [preset],
     content: [
         './app/Filament/**/*.php',
-        './resources/views/filament/**/*.blade.php',
+        './resources/views/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
     ],
     theme: {
@@ -23,6 +23,11 @@ export default {
                     900: '#831843',
                     950: '#500724',
                 },
+                cream: '#faf9f7',
+            },
+            fontFamily: {
+                'playfair': ['"Playfair Display"', 'serif'],
+                'satisfy': ['Satisfy', 'cursive'],
             },
         },
     },
