@@ -27,9 +27,26 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Blossom Hair')
+            ->brandLogo(asset('images/logo.svg'))
+            ->brandLogoHeight('2rem')
+            ->favicon(asset('images/favicon.svg'))
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Rose,
             ])
+            ->darkMode()
+            ->sidebarCollapsibleOnDesktop()
+            ->sidebarFullyCollapsibleOnDesktop()
+            ->navigationGroups([
+                'Catalog',
+                'Sales',
+                'Marketing',
+                'Settings',
+            ])
+            ->renderHook(
+                'panels::styles.before',
+                fn (): string => view('vendor.filament-panels.components.styles.theme')->render(),
+            )
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
@@ -53,6 +70,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->spa();
     }
 }
