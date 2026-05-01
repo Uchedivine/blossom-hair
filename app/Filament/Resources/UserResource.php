@@ -43,6 +43,16 @@ class UserResource extends Resource
                             ->unique(ignoreRecord: true)
                             ->maxLength(255),
                         
+                        Forms\Components\Select::make('role')
+                            ->options([
+                                'customer' => 'Customer',
+                                'admin' => 'Admin',
+                            ])
+                            ->required()
+                            ->default('customer')
+                            ->native(false)
+                            ->helperText('Admin users can access the admin panel'),
+                        
                         Forms\Components\TextInput::make('phone')
                             ->tel()
                             ->maxLength(255)
@@ -88,6 +98,14 @@ class UserResource extends Resource
                     ->sortable()
                     ->copyable(),
                 
+                Tables\Columns\TextColumn::make('role')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'admin' => 'danger',
+                        'customer' => 'success',
+                    })
+                    ->sortable(),
+                
                 Tables\Columns\TextColumn::make('phone')
                     ->searchable()
                     ->placeholder('—'),
@@ -121,6 +139,12 @@ class UserResource extends Resource
                     ->trueLabel('Verified only')
                     ->falseLabel('Unverified only')
                     ->native(false),
+                
+                Tables\Filters\SelectFilter::make('role')
+                    ->options([
+                        'customer' => 'Customer',
+                        'admin' => 'Admin',
+                    ]),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),

@@ -12,7 +12,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'avatar'
+        'name', 'email', 'password', 'phone', 'avatar', 'role'
     ];
 
     protected $hidden = [
@@ -22,9 +22,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password'          => 'hashed',
-         'phone'             => 'string',
-    'avatar'            => 'string',
+        'phone'             => 'string',
+        'avatar'            => 'string',
     ];
+
+    /**
+     * Check if user is an admin
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user is a customer
+     */
+    public function isCustomer(): bool
+    {
+        return $this->role === 'customer';
+    }
 
     public function addresses(): HasMany
     {
