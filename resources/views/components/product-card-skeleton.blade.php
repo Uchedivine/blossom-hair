@@ -1,37 +1,29 @@
-<div class="animate-pulse">
-    <!-- Image Skeleton -->
-    <div class="relative overflow-hidden rounded-2xl aspect-square bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-shimmer mb-4"></div>
+<div aria-hidden="true">
+    {{-- Image skeleton --}}
+    <div class="animate-shimmer"
+         style="aspect-ratio:1;border-radius:20px;margin-bottom:14px;">
+    </div>
 
-    <!-- Content Skeleton -->
-    <div class="space-y-3">
-        <!-- Category -->
-        <div class="h-4 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-shimmer rounded w-1/4"></div>
+    {{-- Category --}}
+    <div class="animate-shimmer"
+         style="height:10px;width:50px;border-radius:4px;margin-bottom:8px;">
+    </div>
 
-        <!-- Title -->
-        <div class="space-y-2">
-            <div class="h-4 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-shimmer rounded"></div>
-            <div class="h-4 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-shimmer rounded w-3/4"></div>
-        </div>
+    {{-- Title --}}
+    <div class="animate-shimmer"
+         style="height:14px;width:85%;border-radius:4px;margin-bottom:5px;">
+    </div>
+    <div class="animate-shimmer"
+         style="height:14px;width:65%;border-radius:4px;margin-bottom:10px;">
+    </div>
 
-        <!-- Rating -->
-        <div class="h-4 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-shimmer rounded w-1/3"></div>
+    {{-- Stars --}}
+    <div class="animate-shimmer"
+         style="height:12px;width:80px;border-radius:4px;margin-bottom:10px;">
+    </div>
 
-        <!-- Price -->
-        <div class="h-6 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-shimmer rounded w-1/2"></div>
+    {{-- Price --}}
+    <div class="animate-shimmer"
+         style="height:20px;width:90px;border-radius:4px;">
     </div>
 </div>
-
-<style>
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-.animate-shimmer {
-    animation: shimmer 2s infinite;
-}
-</style>

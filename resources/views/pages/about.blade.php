@@ -18,7 +18,7 @@
     <!-- Our Story -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
         <div>
-            <h2 class="font-playfair text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+            <h2 class="font-playfair text-4xl font-bold text-[#fda4af] mb-6">Our Story</h2>
             <div class="prose prose-lg text-gray-600 space-y-4">
                 <p>
                     Founded with a passion for beauty and quality, Blossom Hair has been serving customers across Nigeria with premium human hair extensions that make every woman feel confident and beautiful.
@@ -38,7 +38,7 @@
 
     <!-- Our Values -->
     <div class="mb-20">
-        <h2 class="font-playfair text-4xl font-bold text-gray-900 text-center mb-12">Our Values</h2>
+        <h2 class="font-playfair text-4xl font-bold text-[#fda4af] text-center mb-12">Our Values</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
                 <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -126,7 +126,7 @@
 
     <!-- CTA -->
     <div class="text-center mt-16">
-        <h2 class="font-playfair text-3xl font-bold text-gray-900 mb-6">Ready to Find Your Perfect Hair?</h2>
+        <h2 class="font-playfair text-3xl font-bold text-[#fda4af] mb-6">Ready to Find Your Perfect Hair?</h2>
         <a href="{{ route('shop.index') }}" class="inline-block bg-rose-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-rose-600 transition transform hover:scale-105 shadow-lg">
             Shop Now
         </a>
