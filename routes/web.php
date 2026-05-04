@@ -22,6 +22,9 @@ Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
 Route::post('/cart/destroy', [CartController::class, 'destroy'])->name('cart.destroy');
+Route::post('/cart/coupon', function() {
+    return redirect()->back()->with('error', 'Coupon feature coming soon!');
+})->name('cart.coupon');
 
 // Checkout (placeholder)
 Route::get('/checkout', function() {

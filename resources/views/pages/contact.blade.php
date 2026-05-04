@@ -19,7 +19,7 @@
         <!-- Contact Information -->
         <div class="lg:col-span-1 space-y-8">
             <div>
-                <h2 class="font-playfair text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                <h2 class="font-playfair text-2xl font-bold text-[#fda4af] mb-6">Contact Information</h2>
                 
                 <div class="space-y-6">
                     <!-- Email -->
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
+                            <h3 class="font-semibold text-[#fda4af] mb-1">Email</h3>
                             <a href="mailto:hello@blossomhair.ng" class="text-rose-500 hover:text-rose-600">
                                 hello@blossomhair.ng
                             </a>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-gray-900 mb-1">Phone</h3>
+                            <h3 class="font-semibold text-[#fda4af] mb-1">Phone</h3>
                             <a href="tel:+2348012345678" class="text-rose-500 hover:text-rose-600">
                                 +234 801 234 5678
                             </a>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-gray-900 mb-1">Address</h3>
+                            <h3 class="font-semibold text-[#fda4af] mb-1">Address</h3>
                             <p class="text-gray-600">
                                 123 Beauty Plaza<br>
                                 Victoria Island, Lagos<br>
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-gray-900 mb-1">Business Hours</h3>
+                            <h3 class="font-semibold text-[#fda4af] mb-1">Business Hours</h3>
                             <p class="text-gray-600">
                                 Mon - Fri: 9:00 AM - 6:00 PM<br>
                                 Sat: 10:00 AM - 4:00 PM<br>
@@ -99,7 +99,7 @@
 
             <!-- Social Media -->
             <div>
-                <h3 class="font-semibold text-gray-900 mb-4">Follow Us</h3>
+                <h3 class="font-semibold text-[#fda4af] mb-4">Follow Us</h3>
                 <div class="flex gap-3">
                     <a href="#" class="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center hover:bg-rose-200 transition">
                         <svg class="w-5 h-5 text-rose-600" fill="currentColor" viewBox="0 0 24 24">
@@ -123,7 +123,7 @@
         <!-- Contact Form -->
         <div class="lg:col-span-2">
             <div class="bg-white rounded-2xl shadow-lg p-8">
-                <h2 class="font-playfair text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+                <h2 class="font-playfair text-2xl font-bold text-[#fda4af] mb-6">Send Us a Message</h2>
 
                 @if(session('success'))
                 <div class="mb-6 bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg flex items-center gap-3">
